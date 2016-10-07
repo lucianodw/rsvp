@@ -1,0 +1,29 @@
+/**
+ * Orange Color Scheme
+ * color orange = $primary
+ */
+$primary : #ffdf77;
+
+a,
+a:hover,
+section .feature-items .feature-item i,
+section .team-members .team-member img {
+    color: $primary;
+}
+
+.btn-primary,
+header .learn-more a:hover,
+header .subscribe button,
+header .social a {
+    color: white;
+    background: $primary;
+}
+
+.form-control:focus,
+.btn-primary {
+    border-color: $primary;
+}
+
+.btn-primary:hover {
+    opacity: .8;
+}

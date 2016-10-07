@@ -1,0 +1,79 @@
+
+// RSVP section
+.add-rsvp { 
+   margin-top: 20px;
+
+   label {
+      text-align: left;
+      width: 100%;
+      font-weight: bold;
+   }
+
+    input {
+      background: #f2f2f2 none repeat scroll 0 0;
+      border: 1px solid #ccc;
+
+      &:focus {
+        box-shadow: none;
+      }
+  }
+
+  .select-drink {
+      padding: 7px;
+      border: 1px solid #dedede;
+      border-radius: 3px;
+      cursor: pointer;
+
+      &:hover {
+          background: #f2f2f2;
+      }
+
+      p {
+          font-size: 11px;
+      }
+  }
+
+    .add-rsvp-user p {
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+    .add-rsvp-user a {
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+    .drink-preference {
+        text-align: center;
+    }
+  
+    .drink-preference-circle {
+        text-align: center;
+        background: #f2f2f2;
+        max-height: 125px;
+        width: 100%;
+        border-radius: 100px;
+        padding: 10px;
+
+        img {
+            max-height: 80px;
+        }
+    }
+
+    a.change-preferences, a.change-rsvp {
+        margin-top: 10px;
+        color: #3b78ad;
+        font-size: 12px;
+        display: block;
+    }
+
+    a.btn-rsvp {
+        height: 50px;
+        padding-top: 12px;
+        font-size: 16px;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    
+}

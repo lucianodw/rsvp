@@ -1,0 +1,45 @@
+<div class="container">
+<h1>RSVP Admin</h1>
+
+<!-- RSVP Reports Directive -->
+<div class="section">
+    <h3>RSVP Reporting</h3>
+    <div class="section-component">
+            <report-total></report-total>
+    </div>
+    <div class="section-component">
+            <report-drinks></report-drinks>
+    </div>
+</div> 
+
+<hr>
+
+<!-- Add RSVP Directive -->
+<div class="section">
+    <h3>Add RSVP</h3>
+    <div class="section-component">
+        <code-lookup valid="user.isValidCode" details="user.details"></code-lookup>
+    </div>
+    <div class="section-component" ng-if="user.isValidCode">
+        <h4 ng-show="user.isValidCode">Welcome, {{user.details.name}}!  The code <strong>{{user.details.serial}}</strong> gives you access to RSVP up to {{user.details.quantity}} people!</h4>
+        <hr>
+        <div class="alert alert-success" ng-show="message.rsvp.saved">
+                <p>RSVP has been saved!</p>
+        </div>
+        <add-rsvp code="user.details"></add-rsvp>
+    </div> 
+</div> 
+
+<hr>
+
+<!-- List RSVP Directive -->
+<div class="section">
+    <h3>List RSVP</h3>
+    <div class="section-component">
+        <list-rsvp rsvp="rsvp" removed="message.rsvp.removed"></list-rsvp>
+    </div>
+</div> 
+
+<hr>
+   
+</div>

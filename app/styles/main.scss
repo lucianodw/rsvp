@@ -1,0 +1,239 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "font-awesome/scss/font-awesome.scss";
+@import "bourbon/app/assets/stylesheets/_bourbon.scss";
+@import "neat/app/assets/stylesheets/_neat.scss";
+// endbower
+
+@import "breakpoint";
+@import "helper";
+
+@import "color";
+@import "theme";
+@import "header";
+@import "sections";
+@import "footer";
+@import "reports";
+ 
+@import 'loader';
+@import 'checkmark';
+
+
+@import '../components/rsvp/add.rsvp';
+
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #f4f4f4;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.section {
+  margin: 30px 0;
+
+  .section-component {
+      background: #f2f2f2;
+      padding: 15px;
+  }
+}
+
+
+.hero-section {
+  margin: 30px 0;
+
+  .section-component {
+      text-align: center;
+      padding: 15px;
+  }
+}
+
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+
+/**
+ * Main Stylesheet
+ */
+body, html {
+  height: 100%;
+}
+  body {
+      font-family: 'Open Sans', sans-serif;
+
+      -webkit-animation: fadeIn ease-in 1;
+         -moz-animation: fadeIn ease-in 1;
+              animation: fadeIn ease-in 1;
+
+      -webkit-animation-fill-mode: forwards;
+         -moz-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+
+      -webkit-animation-duration: .8s;
+         -moz-animation-duration: .8s;
+              animation-duration: .8s
+  }
+
+/**
+ * Basics
+ */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+  a:hover, a:focus {
+      opacity: .7;
+      text-decoration: none;
+
+      -webkit-transition: color 350ms ease;
+         -moz-transition: color 350ms ease;
+              transition: color 350ms ease;
+  }
+
+  p {
+    font-weight: 400px;
+  }
+
+  h4 {
+    font-weight: 400px;
+  }
+
+section {
+  color: #606060;
+  padding: 80px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+section.short {
+  padding: 40px 0;
+}
+
+section.bg {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+}
+
+section.gray {
+  color: #656565;
+  background: #f6f6f6;
+}
+  /* Section titles */
+  section h2,
+  section h3 {
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 0 0 1.3em 0;
+    font-weight: 400;
+    line-height: 1.6em;
+  }
+  section h2 {
+    font-size: 2.5em;
+
+    @include media($mobile) {
+      font-size: 1.8em;
+    }
+
+  }
+
+  section p {
+    font-size: 1.2em;
+    line-height: 2em;
+    font-weight: 300;
+  }
+
+form {
+  text-align: left;
+}
+
+.map-content {
+  padding: 0;
+  height: 400px;
+}
+
+    .google-maps {
+        position: relative;
+        padding-bottom: 75%; // This is the aspect ratio
+        height: 0;
+        overflow: hidden;
+    }
+    .google-maps iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 400px;
+    }
+
+.align-left {
+  text-align: left;
+}
+
+.btn {
+    border-radius: 3px;
+}
+
+.form-control {
+    border: 2px solid #eee;
+    box-shadow: none;
+    border-radius: 3px;
+}
+
+.add-code-container input {
+  color: #fff;
+}
+
+@include media($mobile) {
+    .select-drink {
+      margin: 10px 0px;
+  
+      img {
+        margin: 0 auto;
+      }
+    }
+}
+
+/**
+ * Animations
+ */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}

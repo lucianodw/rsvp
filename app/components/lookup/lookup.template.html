@@ -1,0 +1,26 @@
+<label>
+    <div  ng-hide="loading || checkmark">
+        <p>Please Enter Secret Code:</p>
+        <input type="text" class="form-control input-code-lookup" ng-model="code" placeholder="XXXX"/>    
+        <p class="error-text" ng-show="badCode">You were not invited. Try again, fool.</p>
+        <a href class="btn btn-check-code" ng-click="lookup();">
+            <span>Unlock Invitation</span>
+        </a>        
+    </div>
+
+
+    <div class="loader-container" ng-show="loading">
+        <div class="loader">
+            <span class="dot dot_1"></span>
+            <span class="dot dot_2"></span>
+            <span class="dot dot_3"></span>
+            <span class="dot dot_4"></span>
+        </div>
+        <p>Checking Guest List...</p>
+    </div>
+
+    <div ng-if="checkmark">
+        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+        <p>You are a VIP!</p>
+    </div>
+</label>

@@ -1,0 +1,5 @@
+// ----- Mixins -----
+ $mobile: new-breakpoint(max-width 480px 4);
+ $tablet-sm: new-breakpoint(max-width 767px 4);
+ $tablet-lg: new-breakpoint(max-width 1000px 12);
+ $desktop: new-breakpoint(min-width 1001px 12);

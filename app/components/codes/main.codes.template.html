@@ -1,0 +1,38 @@
+<h1>Codes Admin</h1>
+
+<!-- Code Look up  Directive -->
+<div class="section">
+        <h3>Code Lookup</h3>
+        <div class="section-component">
+                <div class="alert alert-success" ng-show="user.isValidCode">
+                        Welcome, {{user.details.name}}!  The code <strong>{{user.details.serial}}</strong> gives you access to RSVP up to {{user.details.quantity}} people!
+                </div>
+                <code-lookup valid="user.isValidCode" details="user.details"></code-lookup>
+        </div>
+</div> 
+
+<hr>
+
+<!-- Add Code  Directive -->
+<div class="section">
+        <h3>Add Code</h3>
+        <div class="section-component">
+                <div class="alert alert-success" ng-show="message.code.saved">
+                        <p>Code has been saved!</p>
+                </div>
+		<add-code saved="message.code.saved"></add-code>
+        </div>
+</div> 
+
+<hr>
+
+<!-- Code List Directive -->
+<div class="section">
+        <h3>List Codes</h3>
+        <div class="section-component">
+                <div class="alert alert-success" ng-show="message.code.removed">
+                        <p>Code has been saved!</p>
+                </div>
+		<list-codes codes="codes" removed="message.code.removed"></list-codes>
+        </div>
+</div> 

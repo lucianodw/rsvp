@@ -1,0 +1,36 @@
+<div class="report-total row">
+	<div class="col-xs-12">
+		 <div class="progress">
+		  <div class="progress-bar" role="progressbar" aria-valuenow="70"
+		  aria-valuemin="0" aria-valuemax="100" style="width:{{(rsvp.length / invitees) * 100 | number: 2}}%">
+		  {{(rsvp.length / invitees) * 100 | number: 2}}%
+		    <span class="sr-only">{{(rsvp.length / invitees) * 100 | number: 2}}% Complete</span>
+		  </div>
+		</div>		
+	</div>
+    <div class="col-xs-12 col-sm-3">
+        <div class="report-panel">
+		  <h2>Total RSVP</h2>
+		  <p>{{rsvp.length}} / {{invitees}}</p>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+        <div class="report-panel">
+		<h2>RSVP: Going </h2>
+		<p>{{yes.length}}</p>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+        <div class="report-panel">
+		<h2>Total Not Going</h2>
+		<p>{{no.length}}</p>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+        <div class="report-panel">
+		<h2>No Answer</h2>
+		<p>{{unknown.length}}</p>
+        </div>
+    </div>
+
+</div>

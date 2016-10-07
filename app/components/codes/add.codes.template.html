@@ -1,0 +1,28 @@
+<div class="add-code-container row">
+    
+    <div class="input-container col-xs-12 col-sm-3">
+        <label for="code">
+            <p>Code</p>
+            <input type="text" class="form-control" ng-model="code.serial" placeholder="XXXX" max="4" ng-change="saved = false"/>
+        </label>
+    </div>
+
+    <div class="input-container col-xs-12 col-sm-3">
+        <label for="name">
+            <p>Ticket Holder Name</p>
+            <input type="text" class="form-control" ng-model="code.name" placeholder="Enter Name" />
+        </label>
+    </div>
+
+    <div class="input-container col-xs-12 col-sm-3">
+        <label for="quantity">
+            <p>Quantity</p>
+            <input type="text" class="form-control" ng-model="code.quantity" placeholder="Enter Quantity" />
+        </label>
+    </div>
+    
+    <div class="col-xs-12 col-sm-3">
+        <p>&nbsp;</p>
+        <a href class="btn btn-success" ng-click="addCode()">Add Code</a>
+    </div>
+</div>

@@ -1,0 +1,171 @@
+
+
+    <!-- Header -->
+    <header id="header">
+        <div class="background">
+            <img-video image='imgPath'  video="videoPath"/>
+        </div>
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                         <!--Logo -->
+                        <!-- <h1 class="logo">Bell</h1> -->
+                        <!-- End Logo -->
+                    </div>
+                </div>
+                <div class="row">
+                </div>
+
+                <div class="row">
+                    <div class="hero-section">
+                        <div class="hero-success" ng-show="user.isValidCode">
+                            <h4 class="animated zoomIn">Welcome, {{user.details.name}}!</h4>
+                            <div class="col-md-6 col-md-offset-3 learn-more  animated infinite pulse">
+                                <span data-smoothscroll="true" class="fa fa-angle-down scroll-down" href=""> You must RSVP below</span>
+                            </div>                           
+                        </div>
+                        <div class="section-component" ng-hide="user.isValidCode">
+                            <code-lookup valid="user.isValidCode" details="user.details"></code-lookup>
+                        </div>
+                    </div> 
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header -->
+
+    <div class="party-locked" ng-if="!user.isValidCode">
+        <i class="fa fa-lock"></i>
+    </div>
+
+    <!-- Content Section -->
+    <section id="content" class="rsvp-content" ng-if="user.isValidCode">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 wow animated fadeInUp">
+                    <h2>RSVP Status</h2>
+                    <h4 ng-show="user.isValidCode">Welcome, {{user.details.name}}!  The code <strong>{{user.details.serial}}</strong> gives you access to RSVP up to {{user.details.quantity}} people!</h4>
+                     <add-rsvp code="user.details"></add-rsvp>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Content Section -->
+
+    <!-- Content Section -->
+    <section id="content" class="details-content"  ng-if="user.isValidCode">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 wow animated fadeInUp">
+                    <h2>Party Details</h2>
+                    <p><strong>Date & Time</strong></p>
+                    <p>November 5th, 2016</p>
+                    <p>7:30 PM till 1:30 AM</p>
+                    <br/>
+                    <p><strong>Location</strong></p>
+                    <p>Zen House</p>
+                    <p>165 Allen St.</p>
+                    <p>New York, NY 10002</p>     
+                    <p><a href="https://www.google.com.au/maps/place/165+Allen+St,+New+York,+NY+10002,+USA/@40.721266,-73.99195,17z/data=!3m1!4b1!4m5!3m4!1s0x89c25986a65ac48d:0xcdd896bea29a1e42!8m2!3d40.721266!4d-73.989756" target="_blank">Open in Google Maps</a></p> 
+                    <br/>
+                    <p><strong>Details</strong></p>
+                    <p>Please dress in your swankiest 20's (or black tie) attire.  Drinks & finger foods will be served among the whisperings, the champagnes & the stars.  </p>
+                    <br/>
+                    <p><strong>Tickets required for entry!</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Content Section -->
+
+    <!-- Content Section -->
+    <section id="content" class="map-content"  ng-if="user.isValidCode">
+            <div class="google-maps">
+                
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1511.9435029187664!2d-73.99042137434391!3d40.720503880798475!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25986a64f7ef9%3A0x93becc6c9bf9f73d!2s165+Allen+St%2C+New+York%2C+NY+10002!5e0!3m2!1sen!2sau!4v1473994787315" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+            </div>    
+    </section>
+    <!-- End Content Section -->
+
+    <!-- Content Section -->
+    <section id="content" class="directions-content"  ng-if="user.isValidCode">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 wow animated fadeInUp">
+                    <h2>Directions</h2>
+                    <p><strong>Grand Central</strong></p>
+                    <p>Follow signs for NYC Subway - take the <img src="images/train-6.png" /> train towards Downtown & Brooklyn.  Get off the <strong class="highlight">Bleeker Street</strong> station & walk the rest of the way.</p>
+                    <br/>
+                    <p><strong>Penn Station</strong></p>
+                    <p>Leave Penn Station and walk to Herald Square (34th Street & 6th Ave).   You can take the <img src="images/train-f.png" /> train towards Coney Island.  Get off the <strong class="highlight">Delancey Street</strong> station & walk the rest of the way. <strong>Please do not take it to Coney Island.  Please.</strong></p>
+                    <br/>
+                    <p><strong>Cab / Uber</strong></p>
+                    <p>Tell the cab driver the address.  Sit back & relax.</p>
+                    <br/>
+                    <p><strong>Driving</strong></p>
+                    <p>It's 2016. Use a damn GPS.</p>
+                    <br/>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Content Section -->
+
+    <!-- Content Section -->
+    <section id="content" class="hotels-content"  ng-if="user.isValidCode">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 wow animated fadeInUp">
+                    <h2>Accommodations</h2>
+                    <p>Many of you may be traveling from farther locations.  You should be able to catch a train back, but below are some options for those of you who wish to live the NYC dream - staying out past the last train.</p>
+                    <br/>
+                    <p><strong>Gatsby Hotel</strong></p>
+                    <p>For anyone feeling extra-swanky - there is a hotel 2 blocks away called the gatsby hotel.  Not the cheapest option, but certainly the option for the occasion.</p>
+                    <p><a href="http://www.gatsbyhotelnyc.com/" target="_blank">The Gatsby Hotel</a></p>
+                    <br/>
+                    <p><strong>Hotels Tonight</strong></p>
+                    <p>The best option in NYC is to use the Hotel Tonight app.  This app allows you to book hotels last minute.  We have used it multiple times in NYC and you can end up scoring high-end hotels for under $200/night - great for sharing a room!</p>
+                    <p><a href="https://www.hoteltonight.com/" target="_blank">Hotel Tonight App</a></p>
+                    <br/>
+                    <p><strong>AirBnb</strong></p>
+                    <p>Great option if you wish to group together and rent an apartment.  This would be  the cheapest option for bigger groups. <em>Link below gives you $30 off if you are a first time user!</em></p>
+                    <p><a href="https://www.airbnb.com/c/nuser8162/" target="_blank">AirBnb Web site</a></p>
+                    <br/>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Content Section -->
+
+    <!-- Content Section 
+    <section id="content" class="gatsby-content"  ng-if="user.isValidCode">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12wow animated fadeInUp">
+                    <h2>Gatsby Ideas</h2>
+                    <p>Below are some ideas for those of you who may not be familiar with the 20's era.   As a soon-to-be 30 year old, i remember those days like they were yesterday...</p>
+                    <br/>
+                    <div>
+                        <img src="" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    End Content Section -->
+
+    <!-- Content Section -->
+    <section id="content" class="the-end-content" >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 wow animated fadeInUp">
+                    <h3><em><random-quote /></em></h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Content Section -->

@@ -1,0 +1,19 @@
+
+	<table class="table table-hover">
+	  <thead>
+	    <tr>
+	      <th>Code</th>
+	      <th>Owner</th>
+	      <th>Quantity</th>
+          <th>Action</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr ng-repeat="code in codes">
+            <td> {{code.serial}}</td>
+            <td>{{code.name}}</td>
+            <td>{{code.quantity}}</td>
+            <td><a href class="btn btn-sm btn-danger" ng-click="removeCode($index)">Delete Code</a></td>
+	    </tr>
+	  </tbody>
+	</table>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700" rel="stylesheet" type="text/css">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css" />
+    <link rel="stylesheet" href="bower_components/nvd3/build/nv.d3.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="rsvpApp" class="green-color">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+     <div ng-view=""></div>
+
+    <!-- Add your site or application content here -->
+    <!--<div class="header" ng-cloak="">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="#/">RSVP Dashboard</a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+            <ul class="nav navbar-nav">
+              <li><a href="#/">Home</a></li>
+              <li><a href="#/codes">Codes</a></li>
+              <li><a href="#/rsvp">RSVP</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>-->
+
+    <!--<div class="footer">
+      <div class="container">
+        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team and Firebase</p>
+      </div>
+    </div>-->
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <!--<script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>-->
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/smoothscroll/dist/smoothscroll.js"></script>
+    <script src="bower_components/wow/dist/wow.js"></script>
+    <script src="bower_components/jquery-smooth-scroll/jquery.smooth-scroll.js"></script>
+    <script src="bower_components/slick/dist/slick.js"></script>
+    <script src="bower_components/slick-carousel/slick/slick.min.js"></script>
+    <script src="bower_components/angular-slick/dist/slick.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/d3/d3.js"></script>
+    <script src="bower_components/nvd3/build/nv.d3.js"></script>
+    <script src="bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="components/app.js"></script>
+        <script src="components/routes.js"></script>
+        <script src="scripts/angularfire/config.js"></script>
+        <script src="scripts/angularfire/firebase.ref.js"></script>
+
+        <script src="components/admin/admin.controller.js"></script>
+        <script src="components/main/main.controller.js"></script>
+        <script src="components/reports/reports.controller.js"></script>
+
+        <script src="components/main/main.directive.js"></script>
+        <script src="components/lookup/lookup.directive.js"></script>
+        <script src="components/codes/list.codes.directive.js"></script>
+        <script src="components/codes/add.codes.directive.js"></script>
+        <script src="components/rsvp/add.rsvp.directive.js"></script>
+        <script src="components/rsvp/add.rsvp.filters.js"></script>
+        <script src="components/rsvp/list.rsvp.directive.js"></script>
+        <script src="components/reports/reports.directive.js"></script>
+
+        
+
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

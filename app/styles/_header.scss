@@ -1,0 +1,192 @@
+/*------------------------------------------------------------------
+HEADER
+
+* body
+  + Header / header
+    - Background / .background
+    - Background Overlay / .overlay
+    - Header Content / .content
+      - Logo / .logo
+      - Social Icons / .social
+      - Headline / h2
+      - Countdown / .countdown [see countdown.css]
+      - Subscription / .subscribe [see subscribe.css]
+      - Learn More / .learn-more
+  + Features Section / section
+  + Team Section / section
+  + Quote Background Section / section.bg-team
+  + Twitter Section / section [see twitter.css]
+  + Footer / footer [see footer.css]
+-------------------------------------------------------------------*/
+header {
+  color: #fff;
+  padding: 10px 0 30px;
+  position: relative;
+  overflow: hidden;
+}
+  @media (min-width: 768px) {
+    header {
+      height: 100%;
+      min-height: 480px;
+    }
+  }
+  /* Background */
+  header .background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+  }
+    header .background img,
+    header .background video {
+      position: absolute;
+      top: 0px;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+    }
+
+  /* Background Overlay */
+  header .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    opacity: .6;
+  }
+
+
+  /* Logo */
+  header h1.logo {
+    background: url('../../demo/logo.png') no-repeat center left;
+    height: 60px;
+    margin: 0;
+    overflow: hidden;
+    text-indent: -9999999px;
+  }
+
+  /* Social Icons */
+  header .social {
+    text-align: right;
+  }
+    header .social a {
+      font-size: 1.3em;
+      text-align: center;
+      line-height: 40px;
+      margin: 10px 15px 10px 0;
+      border-radius: 100%;
+      height: 40px;
+      width: 40px;
+      display: inline-block;
+    }
+
+  header .push-down {
+    margin-top: 15%;
+  }
+
+  /* Headline */
+  header h2 {
+    font-size: 2.1em;
+    font-weight: 600;
+    line-height: 1.7;
+    letter-spacing: 0.08em;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0;
+    color: #a3a7b2;
+  }
+
+  /* Learn More */
+  header .learn-more {
+    text-align: center;
+  }
+    header .learn-more a {
+      margin: 50px 0;
+      padding: 20px 30px;
+      font-size: 1.2em;
+      color: white;
+      font-weight: bold;
+      border-radius: 3px;
+    }
+
+      header .content {
+        position: relative;
+        z-index: 10;
+      }
+
+
+// Custom code
+.scroll-down {
+  font-size: 18px;
+  margin-top: 50px;
+}
+
+.loader-container {
+    margin-top: 40px;
+}
+
+.btn-check-code {
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 18px;
+    margin: 20px 0;
+    padding: 20px;
+
+    &:hover, &:focus {
+        background: $primary;
+        color: #303030;
+        opacity: 1;
+    }
+}
+
+.input-code-lookup {
+    height: 70px;
+    width: 350px;
+    text-align: center;
+    font-size: 32px;
+    background: #000;
+    opacity: 1;
+    color: $primary;
+    text-transform: uppercase;
+
+      @include media($tablet-sm) {
+          width: 100%;
+      }
+}
+
+.hero-success {
+    text-align: center;
+    h4 {
+      font-size: 3.5em;
+    }
+}
+
+.party-locked {
+  text-align: center;
+  .fa {
+      color: #000;
+      font-size: 15em;
+      margin-top: -110px;
+      position: relative;
+      z-index: 20;
+      color: $primary;
+      text-shadow: 0 0 3px #000;
+
+      @include media($tablet-sm) {
+          font-size: 7em;
+          margin-top: -50px;
+      }
+  }
+
+  p {
+    color: #6a6a6a;
+    font-size: 18px;
+  }
+}
+
+.error-text {
+    color: #ffcc43;
+}

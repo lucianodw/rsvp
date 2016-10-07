@@ -1,0 +1,102 @@
+<div class="col-xs-12 add-rsvp" ng-repeat="user in attendees track by $index">
+    <div class="add-rsvp-container panel panel-default" >
+    <div class="panel-body">
+        <div class="add-rsvp-user" ng-show="!screen.drink[$index]">
+                <div class="input-container col-xs-12 col-sm-4">
+                    <label for="name">
+                        <p><b>Guest Name #{{$index+1}}</b></p>
+                        <input type="text" class="form-control" ng-model="attendees[$index].name" placeholder="Enter Your Name" ng-change="screen.saved[$index] = false"/>
+                    </label>
+
+                    <label for="email">
+                        <p><b>Email #{{$index+1}}</b></p>
+                        <input type="text" class="form-control" ng-model="attendees[$index].email" ng-change="screen.saved[$index] = false" placeholder="Enter Email Address" />
+                    </label>
+
+                </div>
+
+                <div class="drink-preference input-container col-xs-12 col-sm-4">
+                        <p><b>Drink Preference</b></p>
+                        <div class="drink-preference-circle" ng-show="attendees[$index].drink">
+                            <img src="../../images/{{attendees[$index].drink | drinkimage}}.png" alt="{{attendees[$index].drink}}">
+                            <p>{{attendees[$index].drink}}</p>
+                        </div>
+                        <a href class="btn btn-default" ng-show="!attendees[$index].drink" ng-click="toggleDrinkScreen($index)">Select a Preference</a>
+                        <a href class='change-preferences' ng-show="attendees[$index].drink" ng-click="toggleDrinkScreen($index)">Change Preference</a>              
+                </div>
+
+                <div class="input-container col-xs-12 col-sm-4">
+                    <div class="col-xs-12" ng-show="attendees[$index].status =='No Answer'">
+                        <p>&nbsp;</p>
+                        <a href class="btn btn-success btn-rsvp" ng-click="addRsvp($index, 'Going')"><i class="fa fa-thumbs-up"></i> Going</a>
+                    </div> 
+
+                    <div class="col-xs-12"  ng-show="attendees[$index].status =='No Answer'">
+                        <a href class="btn btn-danger btn-rsvp" ng-click="addRsvp($index, 'Not Going')"><i class="fa fa-thumbs-down"></i> Can't Go</a>
+                    </div> 
+
+                    <div class="col-xs-12 rsvp-status"  ng-show="attendees[$index].status !='No Answer'">
+                        <div class="ng-class:{'going' : attendees[$index].status == 'Going', 'not-going' : attendees[$index].status == 'Not Going'}">RSVP: {{attendees[$index].status}}</div>
+                        <a href class="change-rsvp" ng-click="attendees[$index].status = 'No Answer'">Change RSVP</a>
+                    </div> 
+
+                    <div class="col-xs-12"  ng-show="attendees[$index].status !='No Answer' && !screen.saved[$index]">
+                        <a href class="btn btn-success btn-rsvp" ng-click="addRsvp($index)">Save Changes</a>
+                    </div> 
+
+                    <div class="col-xs-12 saved-item" ng-show="screen.saved[$index] && attendees[$index].status !='No Answer'">
+                        <p>
+                             <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>    
+                        </p>
+                        <p>Added RSVP!</p>
+                    </div>  
+                </div>    
+  
+            </div>
+                 
+        
+        <div class="add-rsvp-drink" ng-show="screen.drink[$index]">
+            <slick class="slider single-item" responsive="breakpoints" slides-to-show="3" slides-to-scroll="3">
+                <h4>Pick your poison:</h4>
+                <div class="col-xs-12 col-sm-4 col-md-2">
+                    <div class="select-drink" ng-click="setDrink($index, 'Champagne')">
+                        <img src="../../images/champagne.png" class="img-responsive" alt="Champagne">
+                        <p>Champagne</p>
+                    </div>   
+                </div>  
+                <div class="col-xs-12 col-sm-4 col-md-2">
+                    <div class="select-drink" ng-click="setDrink($index, 'Red Wine')">
+                        <img src="../../images/redwine.png" class="img-responsive" alt="Red Wine">
+                        <p>Red Wine</p>
+                    </div>   
+                </div>  
+                <div class="col-xs-12 col-sm-4 col-md-2">
+                    <div class="select-drink" ng-click="setDrink($index, 'White Wine')">
+                        <img src="../../images/whitewine.png" class="img-responsive" alt="White Wine">
+                        <p>White Wine</p>
+                    </div>   
+                </div>    
+                <div class="col-xs-12 col-sm-4 col-md-2">
+                    <div class="select-drink" ng-click="setDrink($index, 'Beer')">
+                        <img src="../../images/beer.png" class="img-responsive" alt="Beer">
+                        <p>Beer</p>
+                    </div>   
+                </div>  
+                <div class="col-xs-12 col-sm-4 col-md-2">
+                    <div class="select-drink" ng-click="setDrink($index, 'Clear Spirits')">
+                        <img src="../../images/clearspirits.png" class="img-responsive" alt="Clear Spirits">
+                        <p>Clear Spirits</p>
+                    </div>   
+                </div>    
+                <div class="col-xs-12 col-sm-4 col-md-2">
+                    <div class="select-drink" ng-click="setDrink($index, 'Dark Spirits')">
+                        <img src="../../images/darkspirits.png" class="img-responsive" alt="Dark Spirits">
+                        <p>Dark Spirits</p>
+                    </div>   
+                </div>    
+            </slick>
+        </div>
+
+    </div>
+    </div>  
+</div>

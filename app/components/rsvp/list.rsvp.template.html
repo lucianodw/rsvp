@@ -1,0 +1,28 @@
+
+	<div>
+		<button ng-click="screen.delete = !screen.delete" class="btn btn-sm ng-class: {'btn-danger': screen.delete, 'btn-success': !screen.delete}">Toggle Delete: <span ng-show="!screen.delete">ON</span> <span ng-show="screen.delete">OFF</span></button>
+	</div>
+	<table class="table table-hover">
+	  <thead>
+	    <tr>
+	      <th>#</th>
+	      <th>Name</th>
+	      <th class="hidden-xs">Email</th>
+	      <th>Code</th>
+	      <th class="hidden-xs">Alcohol</th>
+	      <th>Status</th>
+				<th>Action</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr ng-repeat="user in rsvp">
+            <td> {{$index+1}}</td>
+            <td> {{user.name}}</td>
+            <td class="hidden-xs">{{user.email}}</td>
+            <td>{{user.code}}</td>
+            <td class="hidden-xs">{{user.drink}}</td>
+            <td><span class="ng-class{'default': user.status == 'No Answer', 'success' : user.status == 'Going', 'danger': user.status == 'Not Going'}">{{user.status}}</span></td>
+		<td><a href class="btn btn-sm btn-danger" ng-click="removeRsvp($index)" ng-show="screen.delete">Delete RSVP</a></td>
+	    </tr>
+	  </tbody>
+	</table>
